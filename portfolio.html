@@ -9,6 +9,10 @@
 
 		<link type="text/css" rel="stylesheet" href="style.css" />
 
+		<script src="scripts.js"></script>
+
+		<link rel="stylesheet" href="https://use.typekit.net/zhu6eig.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,34 +37,83 @@
 
   <main>
 
+	<nav class="portnav">
+		<ul>
+			<li><a href="#photography">Photography</a></li>
+			<li><a href="#branding">Branding</a></li>
+			<li><a href="#Design">Website Design</a></li>
+		</ul>
+	</nav>
 	<body>
-		<h3 class="portfolio">Photography</h3>
-		<div class="imggridporfolio">
-		<section class="image-grid">
-				 <figure><img src="images/fishgrad.jpg" alt="graduation" title="graduation"/></figure>
-				 <figure><img src="images/wedding.jpg" alt="wedding" title="wedding"/></figure>
-				 <figure><img src="images/savannahgrad.jpg" alt="graduation" title="bullgator"/></figure>
-				 <figure><img src="images/girls.jpg" alt="girls" title="girls"/></figure>
-			 </section>
-		 </div>
-		 <h3 class="portfolio">Band Artwork</h3>
-		 <div class="imggridporfolio">
-		 <section class="image-grid">
-					<figure><img src="images/Macramecover5.jpg" alt="MacrameGNV" title="Macrame Band"/></figure>
-					<figure><img src="images/macrame@2x.png" alt="band" title="band"/></figure>
-					<figure><img src="images/band2.jpg" alt="band" title="band"/></figure>
-				</section>
-			</div>
-			<h3 class="portfolio">UF Projects</h3>
-			<div class="imggridporfolio">
-			<section class="image-grid">
-					 <figure><img src="images/ebookcover.jpg" alt="alice ebook" title="alice ebook"/></figure>
-					 <figure><img src="images/cookbook.png" alt="Cookbook.png" title="Cookbook Cover"/></figure>
-					 <figure><img src="images/wholefoods.jpg" alt="wholefoods" title="wholefoods"/></figure>
-				 </section>
-			 </div>
+		<div class="row">
+	    <div class="col">
+	       <img src="images/antgrad.jpg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="ant grad" />
+	    </div>
+	    <div class="col">
+	       <img src="images/macrame@2x.jpg" onclick="openLightbox();toSlide(2)" class="hover-shadow preview" alt="macrame" />
+	    </div>
+	    <div class="col">
+	       <img src="images/june.png" onclick="openLightbox();toSlide(3)" class="hover-shadow preview" alt="june" />
+	    </div>
+	  </div>
 
+	  <div id="Lightbox" class="modal">
 
+	    <span class="close pointer" onclick="closeLightbox()">&times;</span>
+	    <div class="modal-content">
+	      <div class="slide">
+	        <img src="images/antgrad.jpg" class="image-slide" alt="ant grad" />
+	      </div>
+	      <div class="slide">
+	        <img src="images/macrame@2x.jpg" class="image-slide" alt="macrame" />
+	      </div>
+	      <div class="slide">
+	        <img src="images/june.png" class="image-slide" alt="june" />
+	      </div>
+
+	      <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+	      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+	      <div class="dots">
+	        <div class="col">
+	          <img src="images/antgrad.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="ant grad" />
+	        </div>
+	        <div class="col">
+	          <img src="images/macrame@2x.jpg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="macrame" />
+	        </div>
+	        <div class="col">
+	          <img src="images/june.png" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="june" />
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+		<section class="port" id="photography">
+			<h2>Photography</h2>
+			<article class="photoimg">
+			<img src="images/savannahgrad.jpg" alt="grad" title="grad"/>
+			<img src="images/wedding.jpg" alt="wedding" title="wedding"/>
+			<img src="images/antgrad.jpg" alt="grad" title="grad"/>
+			</article>
+
+		</section>
+		<section class="port" id="branding">
+			<h2>Branding</h2>
+			<article class="photoimg">
+			<img src="images/Macramecover5.jpg" alt="grad" title="grad"/>
+			<img src="images/macrame@2x.jpg" alt="wedding" title="wedding"/>
+			<img src="images/Macramecover8.jpg" alt="grad" title="grad"/>
+			</article>
+		</section>
+
+		<section class="port" id="Design">
+			<h2>Design</h2>
+			<article class="photoimg">
+			<img src="images/savannahgrad.jpg" alt="grad" title="grad"/>
+			<img src="images/june.png" alt="wedding" title="wedding"/>
+			<img src="images/yeslawd.png" alt="andyp" title="andyp"/>
+			</article>
+		</section>
 
 
 

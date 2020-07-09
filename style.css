@@ -4,7 +4,10 @@
 	border: 0;
 	font-family: 'Muli', sans-serif;
 }
-
+@font-face {
+	font-family: 'gastromond';
+	src: url('https://use.typekit.net/zhu6eig.css');
+}
 article, aside, details, figcaption, figure, footer, header, main, nav, section, summary, div{
     display:block;
 }
@@ -66,6 +69,7 @@ nav ul li a{
 
 main{
 	background-color: #ffe8e9;
+	padding-bottom: 0%;
 }
 
 .homeabt{
@@ -194,6 +198,175 @@ article p{
 	max-width: 20%;
 }
 
+
+/* portfolio */
+.portnav{
+	background-color: pink;
+}
+.portnav li{
+	font-size: .5em;
+}
+
+.portnav li a{
+	color: black;
+}
+
+.preview {
+	width: 100%;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 4%;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+.row > .col {
+	padding: 0 8px;
+}
+
+.col {
+	float: left;
+	width: 25%;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding: 5% 1% 0px 6%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: black;
+}
+
+.modal-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+	padding: 0 0 0 0;
+	width: 30%;
+	max-width: 1100px;
+}
+
+.slide {
+	display: none;
+}
+
+.image-slide {
+	width: 100%;
+}
+
+.modal-preview {
+	width: 100%;
+}
+
+.dots {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+img.preview, img.modal-preview {
+	opacity: 0.6;
+}
+
+img.active,
+.preview:hover,
+.modal-preview:hover {
+	opacity: 1;
+}
+
+img.hover-shadow {
+	transition: 0.3s;
+}
+
+.hover-shadow:hover {
+	box-shadow: 0 1% 1% 0 rgba(0, 0, 0, 0.2), 0 2% 6% 0 rgba(0, 0, 0, 0.19);
+}
+
+.close {
+	color: white;
+	top: 3%;
+	right: 3%;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.previous,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 4%;
+	color: white;
+	font-weight: bold;
+	transition: 0.6s ease;
+	border-radius: 0 1% 1% 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.next {
+	right: 0;
+	border-radius: 1% 0 0 1%;
+}
+
+.previous:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+section h2{
+	font-family: 'gastromond';
+	margin: 3% 0 3% 0;
+	text-align: center;
+	padding: 2%;
+	font-size: 3em;
+	line-height: 150%;
+}
+
+.port{
+	padding-bottom: 3%;
+}
+#port h2{
+	font-family: 'gastromond', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	background-color:  #a9ba9d;
+	margin: 3% 0 3% 0;
+	text-align: center;
+	padding: 2%;
+	font-size: 3em;
+}
+
+.photoimg{
+	display: flex;
+	justify-content: space-between;
+}
+
+.photoimg img{
+	margin: 0 6% 0 6%;
+	max-width: 20%;
+}
+
+
 /*========================================
 *
 *     Contact Section
@@ -287,6 +460,93 @@ figure{
 
 @media (max-width: 580px){
 
+	.homeabt{
+		margin-bottom: 0%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-basis: 0;
+		align-items: center;
+		background-color: #a9ba9d;
+	}
+
+	.homeabt2{
+		margin-bottom: 0%;
+		display: flex;
+		flex-direction: column;
+		flex-basis: 0;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #a9ba9d;
+	}
+
+	.homeabt2 .flexcontent1{
+		max-width: 100%;
+
+	}
+
+	.flexcontent{
+		max-width: 100%;
+	}
+
+	.flexcontent img{
+		object-fit: cover;
+	}
+
+	.flexcontent1{
+		line-height: 150%;
+		text-align: center;
+		max-width: 50%;
+	}
+
+	.flexcontent2{
+		line-height: 150%;
+		text-align: center;
+		max-width: 50%;
+	}
+
+
+	.flexcontent1 h2{
+		margin-left: 0%;
+		padding-bottom: 3%;
+		font-size: 1.3em;
+	}
+
+	.flexcontent1 p{
+		margin-left: 0%;
+		padding: 3%;
+	}
+
+	.flexcontent2 h2{
+		margin-right: 0%;
+		padding-bottom: 3%;
+		font-size: 1.3em;
+	}
+
+	.flexcontent2 p{
+		margin-right: 0%;
+		padding: 3%;
+}
+
+.image-grid{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+figure{
+	width: 100%;
+}
+}
+
+
+
+
 	h2{
 		font-size: .4em;
 	}
@@ -301,9 +561,6 @@ figure{
 	article p{
 	 font-size: .6em;
 	}
-
-
-
 
 
 @media (max-width: 800px){
